@@ -14810,7 +14810,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># arbitrary values</span>
-<span class="n">img_1_np_pwl</span> <span class="o">=</span> <span class="n">pwl_transform</span><span class="p">(</span><span class="n">img_1_np</span><span class="p">,</span> <span class="mf">.35</span><span class="p">,</span> <span class="mf">.65</span><span class="p">,</span> <span class="mf">.15</span><span class="p">,</span> <span class="mf">.85</span><span class="p">)</span>
+<span class="n">img_1_np_pwl</span> <span class="o">=</span> <span class="n">pwl_transform</span><span class="p">(</span><span class="n">img_1_np</span><span class="p">,</span> <span class="mf">.35</span><span class="p">,</span> <span class="mf">.95</span><span class="p">,</span> <span class="mf">.45</span><span class="p">,</span> <span class="mf">.85</span><span class="p">)</span>
 <span class="n">img_1_pwl</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">img_1_np_pwl</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">))</span>
 </pre></div>
 
@@ -14863,7 +14863,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Как видим, в результате применения градационного преобразования с использованием кусочно-линейной функции контрастность изображения действительно повысилась.</p>
+<p>В результате применения градационного преобразования со значениями $r1=0.35,r2=0.95,s1=0.45,s2=0.85$ удалось выровнять контрастность -- меньше засвет на левой части лица, меньше тень на правой части лица.</p>
 
 </div>
 </div>
@@ -15421,7 +15421,7 @@ Max values:
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Степенные преобразования имеют вид $s=c*r^\gamma$, где $c$ и $\gamma$ -- положительные константы. На вход функции <em>power_transform</em> передается изображение и эти константы.</p>
-<p>Гамма-коррекция позволяет сделать изображение светлее, что, например, часто используется для осветления снимков, сделанных на основе мониторов с электронно-лучевыми трубками.</p>
+<p>Гамма-коррекция позволяет сделать <em>определенные области</em> на изображении светлее, что, например, часто используется для осветления <em>конкретных деталей</em> снимков, сделанных на основе мониторов с электронно-лучевыми трубками.</p>
 
 </div>
 </div>
@@ -15649,7 +15649,7 @@ Max values:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Как видим, в результате применения преобразования, использующего функцию гамма-коррекции, изображения действительно стали светлее.</p>
+<p>Как видим, в результате применения преобразования, использующего функцию гамма-коррекции, определенные детали изображений -- дома в левой части первого изображения, а также дома на заднем плане в правой части второго изображения действительно стали светлее.</p>
 
 </div>
 </div>
